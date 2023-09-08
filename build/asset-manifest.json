@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.23fa485c.css",
-    "main.js": "/static/js/main.f1791242.js",
-    "static/js/787.ce3eb496.chunk.js": "/static/js/787.ce3eb496.chunk.js",
-    "index.html": "/index.html",
-    "main.23fa485c.css.map": "/static/css/main.23fa485c.css.map",
-    "main.f1791242.js.map": "/static/js/main.f1791242.js.map",
-    "787.ce3eb496.chunk.js.map": "/static/js/787.ce3eb496.chunk.js.map"
+    "main.css": "/Filecoin_NFT/static/css/main.23fa485c.css",
+    "main.js": "/Filecoin_NFT/static/js/main.a651006f.js",
+    "static/js/787.ce3eb496.chunk.js": "/Filecoin_NFT/static/js/787.ce3eb496.chunk.js",
+    "index.html": "/Filecoin_NFT/index.html",
+    "main.23fa485c.css.map": "/Filecoin_NFT/static/css/main.23fa485c.css.map",
+    "main.a651006f.js.map": "/Filecoin_NFT/static/js/main.a651006f.js.map",
+    "787.ce3eb496.chunk.js.map": "/Filecoin_NFT/static/js/787.ce3eb496.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23fa485c.css",
-    "static/js/main.f1791242.js"
+    "static/js/main.a651006f.js"
   ]
 }
