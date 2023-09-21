@@ -18,14 +18,14 @@ const Home = (props) => {
         console.log(data)
         for (let i = 0; i <data.length; i++) {  
           const ProductID = data[i][0].toString()
-          const imageUrl = data[i][1];
+          const videoUrl = data[i][1];
           const seller = data[i][3];
           const price =data[i][4].toString();
           const status = data[i][5];
           const nftname = data[i][6].toString();
           setProduct((prevProduct) => ({
             ...prevProduct,
-          [ProductID]: [nftname,imageUrl,price,status,seller]
+          [ProductID]: [nftname,videoUrl,price,status,seller]
         }));
         console.log(product);
       }
@@ -38,10 +38,10 @@ const Home = (props) => {
     console.log()
     console.log(props.contract)
   },[props.contract,total]);
-  const handleBuyClick = (nftname,price,imageUrl,ProductID) => {
+  const handleBuyClick = (nftname,price,videoUrl,ProductID) => {
       setItems((prevCart) => ({
         ...prevCart,
-      [ProductID]: [nftname,imageUrl,price],
+      [ProductID]: [nftname,videoUrl,price],
     }));
     setTotal(total+parseInt(price));  
   }
@@ -70,16 +70,16 @@ const Home = (props) => {
       <center><a>CONNECTED TO: {props.account}</a></center><br/>
         <h3>LIVE NFTS</h3>
         <div className="inner">
-          {Object.entries(product).map(([ProductID,[nftname,imageUrl,price,status,seller]], index) => (
+          {Object.entries(product).map(([ProductID,[nftname,videoUrl,price,status,seller]], index) => (
             status == false ?"":
             <div className="Productitem" key={index}>
               <div className="productbody">
                 <center>
-                  <img src={imageUrl} width="260px" height="200px" alt="Product" />
+                  <video src={videoUrl} width="260px" height="150px" alt="Product" />
                   <p>{nftname}</p>
                   <span><b>{seller}</b></span>
                   <p><b>Price: {price} Wei</b></p>
-                  <button onClick={() => {handleBuyClick(nftname,price,imageUrl,ProductID);alert("Added to Cart")}} class="btn btn-dark">BUY</button>
+                  <button onClick={() => {handleBuyClick(nftname,price,videoUrl,ProductID);alert("Added to Cart")}} class="btn btn-dark">BUY</button>
                 </center>
               </div>
             </div>
@@ -90,4 +90,3 @@ const Home = (props) => {
   );
 };
 export default (Home);
-
